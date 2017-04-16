@@ -308,14 +308,13 @@
         }
         #order {
             text-align: center;
-            height: 80px;
+            height: 35px;
         }
         #orderleft {
-            padding-left: 22%;
+            padding-left: 21%;
         }
         #orderright {
-            padding-right: 31%;
-            padding-top: 1.5%;
+            padding-top: 5.5px;
         }
         #shoppadding {
             height: 450px;
