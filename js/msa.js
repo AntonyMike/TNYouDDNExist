@@ -14,13 +14,14 @@ $(document).ready(function () {
         location.reload(); //重新整理刷新網頁
     }
     var resizeId;
-    
     $(window).resize(function () {
-        clearTimeout(resizeId);
-        resizeId = setTimeout(checkWidth, 500); //當停止螢幕拖拉才執行
-        //  計算導覽列垂直置中的高度
-        var pos = $(window).height() / 2 - $(".navrightbar").height() / 2;
-        $(".navrightbar").css("top", pos);
+        if ($window.width() >= 1095) {
+            clearTimeout(resizeId);
+            resizeId = setTimeout(checkWidth, 500); //當停止螢幕拖拉才執行
+            //  計算導覽列垂直置中的高度
+            var pos = $(window).height() / 2 - $(".navrightbar").height() / 2;
+            $(".navrightbar").css("top", pos);
+        }
     });
     $(window).scroll(function () {
         if ($(window).scrollTop() >= $("#aboutus").offset().top && $(window).scrollTop() < $("#allactivity").offset().top) {
@@ -57,12 +58,11 @@ $(document).ready(function () {
         delay: 50
     });
     $('.button-collapse').sideNav({
-      menuWidth: 800, // Default is 300
-      edge: 'left', // Choose the horizontal origin
-      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      draggable: true // Choose whether you can drag to open on touch screens
-    }
-  );
+        menuWidth: 800, // Default is 300
+        edge: 'left', // Choose the horizontal origin
+        closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        draggable: true // Choose whether you can drag to open on touch screens
+    });
 });
 $(function () {
     var banner = document.getElementById('banner').clientHeight; //抓取banner的高
