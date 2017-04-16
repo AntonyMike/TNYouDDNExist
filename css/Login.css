@@ -72,13 +72,6 @@
         color: #fff;
     }
     
-    #RWDsidebarbtn {
-        position: absolute;
-        top: 55px;
-        left: 20px;
-        left: 20px;
-    }
-    
     #RWDicon {
         border: none;
         border-radius: 200px;
@@ -333,6 +326,11 @@
     @media screen and (max-width:980px) {
         .RWDdisplay {
             display: none;
+        }
+        #RWDsidebarbtn {
+            position: absolute;
+            top: 55px;
+            right: 20px;
         }
         /* ----- 【 RWD Font 】 ----- */
         .titleword {
