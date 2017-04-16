@@ -15,7 +15,7 @@ $(document).ready(function () {
     }
     var resizeId;
     $(window).resize(function () {
-        if ($window.width() >= 1095) {
+        if ($window.width() >= 975) {
             clearTimeout(resizeId);
             resizeId = setTimeout(checkWidth, 500); //當停止螢幕拖拉才執行
             //  計算導覽列垂直置中的高度

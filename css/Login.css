@@ -325,7 +325,7 @@ footer {
 
 @media screen and (max-width:599px) {}
 
-@media screen and (max-width:1095px) {
+@media screen and (max-width:980px) {
     #RWDdisplay{
         display: none;
     }
