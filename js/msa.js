@@ -14,13 +14,14 @@ $(document).ready(function () {
         location.reload(); //重新整理刷新網頁
     }
     var resizeId;
+    /*
     $(window).resize(function () {
         clearTimeout(resizeId);
         resizeId = setTimeout(checkWidth, 500); //當停止螢幕拖拉才執行
         //  計算導覽列垂直置中的高度
         var pos = $(window).height() / 2 - $(".navrightbar").height() / 2;
         $(".navrightbar").css("top", pos);
-    });
+    });*/
     $(window).scroll(function () {
         if ($(window).scrollTop() >= $("#aboutus").offset().top && $(window).scrollTop() < $("#allactivity").offset().top) {
             $(".navbtnsize").css("background-color", "#626262") //除了被點擊到的游標，其他都恢復成原來的顏色
@@ -55,8 +56,14 @@ $(document).ready(function () {
     $('.tooltipped').tooltip({
         delay: 50
     });
+    $('.button-collapse').sideNav({
+      menuWidth: 800, // Default is 300
+      edge: 'left', // Choose the horizontal origin
+      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: true // Choose whether you can drag to open on touch screens
+    }
+  );
 });
-
 $(function () {
     var banner = document.getElementById('banner').clientHeight; //抓取banner的高
     var hompagemenu = document.getElementById('hompagemenu').clientHeight; //抓取hompagemenu的高 
@@ -64,7 +71,7 @@ $(function () {
     var creativepurpose = document.getElementById('creativepurpose').clientHeight; //抓取creativepurpose的高
     var allactivity = document.getElementById('allactivity').clientHeight; //抓取allactivity的高
     if (allactivity < 555) {
-        allactivity = 555;
+        allactivity = 590;
     }
     var picturestroy = document.getElementById('picturestroy').clientHeight; //抓取picturestroy的高
     var ourteam = document.getElementById('ourteam').clientHeight; //抓取ourteam的高
@@ -73,7 +80,7 @@ $(function () {
         $("html,body").animate({
             scrollTop: banner + hompagemenu
         }, 900);
-        $(".navbtnsize").css("background-color", "#626262") //除了被點擊到的游標，其他都恢復成原來的顏色
+        $(".navbtnsize").css("background-color", "#626262"); //除了被點擊到的游標，其他都恢復成原來的顏色
         $(".navrightbar li a:eq(0)").css("background-color", "#fff");
         //$("html,body").animate({scrollTop:0},900,"easeOutBounce");
         return false;
@@ -82,7 +89,7 @@ $(function () {
         $("html,body").animate({
             scrollTop: banner + hompagemenu + aboutus + creativepurpose
         }, 900);
-        $(".navbtnsize").css("background-color", "#626262") //除了被點擊到的游標，其他都恢復成原來的顏色
+        $(".navbtnsize").css("background-color", "#626262"); //除了被點擊到的游標，其他都恢復成原來的顏色
         $(".navrightbar li a:eq(1)").css("background-color", "#fff");
         //$("html,body").animate({scrollTop:0},900,"easeOutBounce");
         return false;
@@ -91,34 +98,34 @@ $(function () {
         $("html,body").animate({
             scrollTop: banner + hompagemenu + aboutus + creativepurpose + allactivity
         }, 900);
-        $(".navbtnsize").css("background-color", "#626262") //除了被點擊到的游標，其他都恢復成原來的顏色
+        $(".navbtnsize").css("background-color", "#626262"); //除了被點擊到的游標，其他都恢復成原來的顏色
         $(".navrightbar li a:eq(2)").css("background-color", "#fff");
         //$("html,body").animate({scrollTop:0},900,"easeOutBounce");
         return false;
     });
     $(".teamour").click(function () {
         $("html,body").animate({
-            scrollTop: banner + hompagemenu + aboutus + creativepurpose + allactivity + picturestroy1
+            scrollTop: banner + hompagemenu + aboutus + creativepurpose + allactivity + picturestroy
         }, 900);
-        $(".navbtnsize").css("background-color", "#626262") //除了被點擊到的游標，其他都恢復成原來的顏色
+        $(".navbtnsize").css("background-color", "#626262"); //除了被點擊到的游標，其他都恢復成原來的顏色
         $(".navrightbar li a:eq(3)").css("background-color", "#fff");
         //$("html,body").animate({scrollTop:0},900,"easeOutBounce");informationExhibition
         return false;
     });
     $(".informationExhibition").click(function () {
         $("html,body").animate({
-            scrollTop: banner + hompagemenu + aboutus + creativepurpose + allactivity + picturestroy + ourteam
+            scrollTop: banner + hompagemenu + aboutus + creativepurpose + allactivity + picturestroy + 345
         }, 900);
-        $(".navbtnsize").css("background-color", "#626262") //除了被點擊到的游標，其他都恢復成原來的顏色
+        $(".navbtnsize").css("background-color", "#626262"); //除了被點擊到的游標，其他都恢復成原來的顏色
         $(".navrightbar li a:eq(4)").css("background-color", "#fff");
         //$("html,body").animate({scrollTop:0},900,"easeOutBounce");
         return false;
     });
     $(".shop").click(function () {
         $("html,body").animate({
-            scrollTop: banner + hompagemenu + aboutus + creativepurpose + allactivity + picturestroy + ourteam + Exhibitioninformation
+            scrollTop: banner + hompagemenu + aboutus + creativepurpose + allactivity + picturestroy + ourteam + Exhibitioninformation + aboutus
         }, 900);
-        $(".navbtnsize").css("background-color", "#626262") //除了被點擊到的游標，其他都恢復成原來的顏色
+        $(".navbtnsize").css("background-color", "#626262"); //除了被點擊到的游標，其他都恢復成原來的顏色
         $(".navrightbar li a:eq(5)").css("background-color", "#fff");
         return false;
     });

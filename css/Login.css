@@ -41,12 +41,40 @@ footer {
     text-align: center;
     letter-spacing: .5px;
 }
-#RWDicon{
+.largebtn{
+    color: #fff;
+}
+
+#RWDsidebarbtn {
+    position: absolute;
+    top: 55px;
+    left: 20px;
+    left: 20px;
+}
+
+#RWDicon {
     border: none;
     border-radius: 200px;
     background-color: #626262;
     height: 45px;
     width: 45px;
+}
+
+#RWDnavBg {
+    background-color: #626262;
+}
+
+.RWDsideNav {
+    font-size: 50px;
+    font-weight: 500;
+    height: 48px;
+    line-height: 48px;
+}
+
+.RWDnavfont {
+    font-size: 50px;
+    font-weight: bolder;
+    padding-top: 55px;
 }
 
 @media screen and (min-width:600px) {
