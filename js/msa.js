@@ -14,14 +14,14 @@ $(document).ready(function () {
         location.reload(); //重新整理刷新網頁
     }
     var resizeId;
-    /*
+    
     $(window).resize(function () {
         clearTimeout(resizeId);
         resizeId = setTimeout(checkWidth, 500); //當停止螢幕拖拉才執行
         //  計算導覽列垂直置中的高度
         var pos = $(window).height() / 2 - $(".navrightbar").height() / 2;
         $(".navrightbar").css("top", pos);
-    });*/
+    });
     $(window).scroll(function () {
         if ($(window).scrollTop() >= $("#aboutus").offset().top && $(window).scrollTop() < $("#allactivity").offset().top) {
             $(".navbtnsize").css("background-color", "#626262") //除了被點擊到的游標，其他都恢復成原來的顏色
